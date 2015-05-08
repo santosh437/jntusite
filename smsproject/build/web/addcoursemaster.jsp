@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <!DOCTYPE html>
 <html lang="en">
-	
+<!-- Github edit -->	
 <!-- Mirrored from responsiweb.com/themes/preview/ace/1.3.3/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 20 Apr 2015 11:50:53 GMT -->
 <head>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -113,7 +113,7 @@
 		<script src="./assets/dist/js/date-time/bootstrap-datepicker.min.js"></script>
 		<script src="./assets/dist/js/jqGrid/jquery.jqGrid.min.js"></script>
 		<script src="./assets/dist/js/jqGrid/i18n/grid.locale-en.js"></script>
-
+		<!-- Hello Git Hub -->
 		<!-- inline scripts related to this page -->
 		<script type="text/javascript">
 			jQuery(function($) {
