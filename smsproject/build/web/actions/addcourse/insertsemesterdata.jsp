@@ -44,19 +44,14 @@
        // out.println("Connection is going to start");
         JdbcConnection jc = new JdbcConnection();
         
-        String sql = "select count(*) AS count from dbo.temp_semester_master where year = '"+year+"'; ";
+        String sql = "select count(*) AS count from dbo.temp_semester_master where year = '"+year+"' and semester ='"+semester+"'; ";
         rs1 = jc.retreiveData(sql);
         while(rs1.next())
         {
              count = rs1.getInt("count");
         }
         
-        String sql11 = "select count(*) AS count from dbo.temp_semester_master where semister = '"+semester+"'; ";
-        rs2 = jc.retreiveData(sql11);
-        while(rs2.next())
-        {
-             count1 = rs2.getInt("count");
-        }
+        
         System.out.println("count is :"+count);
         String sql1 = "select * from dbo.temp_course_master;";
         
@@ -66,7 +61,7 @@
             cid = rs.getInt("courseid");
         
         String sql_insert = "insert into dbo.temp_semester_master values("+cid+",'"+year+"','"+semester+"','"+sem_print_name+"','"+course_completed+"','"+annual_exam_for_sem+"');";
-        if(count<2 && count1<1 )
+        if(count<1)
         {
             i = jc.insertData(sql_insert);
             if(i == 1)

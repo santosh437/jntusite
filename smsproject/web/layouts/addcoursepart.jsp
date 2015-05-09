@@ -326,7 +326,7 @@
 			{
 	            type: "POST",
 
-	            url: "./actions/insertcoursedata.jsp",
+	            url: "./actions/addcourse/insertcoursedata.jsp",
 
 	            data: str,
 				success: function(msg)
@@ -377,7 +377,7 @@ $(document).ready(function()
 		
 				//return true;
 				// Returns successful data submission message when the entered information is stored in database.
-				$.post("./actions/insertcoursedata.jsp", 
+				$.post("./actions/addcourse/insertcoursedata.jsp", 
 				{
 					coursename: coursename,
 					duration: duration,
@@ -433,7 +433,7 @@ $(document).ready(function()
 		else 
 		{
 			// Returns successful data submission message when the entered information is stored in database.
-			$.post("./actions/insertbranchdata.jsp", 
+			$.post("./actions/addcourse/insertbranchdata.jsp", 
 			{
 				branchcode: branchcode,
 				branchname: branchname,
@@ -464,7 +464,7 @@ $(document).ready(function()
 			{
 				//alert("waitbranch");
 				var $select = $('#table_branch');	       
-		 		$.getJSON("./actions/getbranch.jsp",{id: $select.val(), ajax: 'true'}, function(j)
+		 		$.getJSON("./actions/addcourse/getbranch.jsp",{id: $select.val(), ajax: 'true'}, function(j)
 				{
 		     	 var options = '';
 		      	for (var i = 0; i < j.length; i++) 
@@ -509,7 +509,7 @@ $(document).ready(function()
 		{
 			
 			// Returns successful data submission message when the entered information is stored in database.
-			$.post("./actions/insertsemesterdata.jsp", 
+			$.post("./actions/addcourse/insertsemesterdata.jsp", 
 			{
 				year: year,
 				semestername: semestername,
@@ -541,7 +541,7 @@ $(document).ready(function()
 			{
 				//alert("waitsem");
 				var $select = $('#table_semister');	       
-		 		$.getJSON("./actions/getsemister.jsp",{id: $select.val(), ajax: 'true'}, function(j)
+		 		$.getJSON("./actions/addcourse/getsemister.jsp",{id: $select.val(), ajax: 'true'}, function(j)
 				{
                    var options = '';
                    for (var i = 0; i < j.length; i++) 
@@ -569,7 +569,7 @@ $(document).ready(function()
 	{
 		
 		// Returns successful data submission message when the entered information is stored in database.
-		$.post("./actions/insertmasterdata.jsp", 
+		$.post("./actions/addcourse/insertmasterdata.jsp", 
 		{
 			
 		}, 
@@ -597,7 +597,7 @@ $(document).ready(function()
 			{
 				//alert("waitcourse");
 				var $select = $('#table_course');	       
-		 		$.getJSON("./actions/getcourse.jsp",{id: $select.val(), ajax: 'true'}, function(j)
+		 		$.getJSON("./actions/addcourse/getcourse.jsp",{id: $select.val(), ajax: 'true'}, function(j)
 				{
 	                   var options = '';
 	                   for (var i = 0; i < j.length; i++) 
@@ -645,7 +645,7 @@ $(document).ready(function()
             
 
 		// Returns successful data submission message when the entered information is stored in database.
-		$.post("./actions/deletetempdata.jsp", 
+		$.post("./actions/addcourse/deletetempdata.jsp", 
 		{
 			
 		}, 
@@ -684,7 +684,7 @@ $(document).ready(function()
 
             type: "POST",
 
-            url: "./actions/insertbranchdata.jsp",
+            url: "./actions/addcourse/insertbranchdata.jsp",
 
             data: str,
 
@@ -728,7 +728,7 @@ $(document).ready(function()
 
             type: "POST",
 
-            url: "./actions/insertsemesterdata.jsp",
+            url: "./actions/addcourse/insertsemesterdata.jsp",
 
             data: str,
 
@@ -759,7 +759,7 @@ jQuery(document).ready(function()
 
             type: "POST",
 
-            url: "./actions/insertmasterdata.jsp",
+            url: "./actions/addcourse/insertmasterdata.jsp",
 
             data: str,
 
@@ -792,7 +792,7 @@ jQuery(document).ready(function()
 {
 	alert("success");
       var $select = $('#branch_code');;
-      $.getJSON("./actions/getbranch.jsp",{id: $(this).val(), ajax: 'true'}, function(j)
+      $.getJSON("./actions/addcourse/getbranch.jsp",{id: $(this).val(), ajax: 'true'}, function(j)
       {
      	 var options = '';
       	for (var i = 0; i < j.length; i++) 
@@ -812,7 +812,7 @@ jQuery(document).ready(function()
 /*	function loaddata()
 	{
 		var $select = $('#table_branch');;
-     		 $.getJSON("./actions/getbranch.jsp",{id: $select.val(), ajax: 'true'}, function(j)
+     		 $.getJSON("./actions/addcourse/getbranch.jsp",{id: $select.val(), ajax: 'true'}, function(j)
       		{
      	 		var options = '';
       	for (var i = 0; i < j.length; i++) 

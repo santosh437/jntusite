@@ -28,7 +28,7 @@
     int i1 = jc.insertData(sql_branch);
     System.out.println("cid is : "+i1);
 
-   String sql_semister = "insert into dbo.semister_master select *from dbo.temp_semister_master;";
+   String sql_semister = "insert into dbo.semester_master select *from dbo.temp_semester_master;";
 
 
     int i2 = jc.insertData(sql_semister);
@@ -39,7 +39,7 @@
     {
         String sql_course_temp = "delete from dbo.temp_course_master;";
         String sql_branch_temp = "delete  from dbo.temp_branch_master;";
-        String sql_semister_temp = "delete  from dbo.temp_semister_master;";
+        String sql_semister_temp = "delete  from dbo.temp_semester_master;";
         int i4 = jc.DeleteData(sql_course_temp);
         int i5 = jc.DeleteData(sql_branch_temp);
         int i6 = jc.DeleteData(sql_semister_temp);

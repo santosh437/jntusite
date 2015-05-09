@@ -74,7 +74,7 @@
             {
                 cid = cid+1;
             }
-            System.out.println("retreiving courseid");
+            System.out.println("retreiving courseid"+cid);
 
             sql = "insert into dbo.temp_course_master values("+cid+",'"+coursename+"','"+duration+"','"+university+"','"+program+"','"+level+"');";
             i = jc.insertData(sql);

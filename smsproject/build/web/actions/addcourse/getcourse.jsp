@@ -21,7 +21,7 @@ JSONArray json = new JSONArray();
 while (j.next())
 {
     //System.out.println("Hello"+j.getString("coursename"));
-    String coursename = j.getString(2);
+    String coursename = j.getString("coursename");
     
     
     obj = new JSONObject();
