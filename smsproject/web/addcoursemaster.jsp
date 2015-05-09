@@ -755,7 +755,7 @@
 	{
 		//alert("hello");
 		var $select = $('#table_branch');;
- 		 $.getJSON("./actions/getbranch.jsp",{id: $select.val(), ajax: 'true'}, function(j)
+ 		 $.getJSON("./actions/addcourse/getbranch.jsp",{id: $select.val(), ajax: 'true'}, function(j)
   		{
  	 		var options = '';
             for (var i = 0; i < j.length; i++) 
@@ -776,7 +776,7 @@
 	{
 		//alert("hello sem");
 		var $select = $('#table_semister');	       
-        $.getJSON("./actions/getsemister.jsp",{id: $select.val(), ajax: 'true'}, function(j)
+        $.getJSON("./actions/addcourse/getsemister.jsp",{id: $select.val(), ajax: 'true'}, function(j)
         {
            var options = '';
            for (var i = 0; i < j.length; i++) 
@@ -798,7 +798,7 @@
 	{
 		//alert("hello course");
 		var $select = $('#table_course');	       
-        $.getJSON("./actions/getcourse.jsp",{id: $select.val(), ajax: 'true'}, function(j)
+        $.getJSON("./actions/addcourse/getcourse.jsp",{id: $select.val(), ajax: 'true'}, function(j)
         {
            var options = '';
            for (var i = 0; i < j.length; i++) 
