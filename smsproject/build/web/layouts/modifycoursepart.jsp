@@ -15,7 +15,7 @@
 					<a href="#">Home</a>
 				</li>
 				<li class="active">View Course</li>
-			</ul><!-- /.breadcrumb   asdfg -->
+			</ul><!-- /.breadcrumb -->
 
 			<div class="nav-search" id="nav-search">
 				<form class="form-search">
@@ -175,6 +175,13 @@
 						<div class="hr hr4 hr-dotted"></div>
 						<div class="col-xs-12" >
 						      <div class="col-xs-12" >
+                                                          <%
+                                                                String bid=request.getParameter("bid");
+                                                                if(id!=null)
+                                                                {
+                                                                    
+                                                                }
+                                                          %>
 								<form class="form-inline" id="Branch_Form" name="Branch_Form" role="form" >
 								 <div style="color:red;margin-left:275px;" id="error_message_display1" ></div>
 									<div class="form-group">
@@ -223,10 +230,33 @@
 										<th >NO.OF SEATS</th>
 										<th>AICTE NAME</th>													
 									</tr>
-								</thead>
-								<tbody id ="table_branch"> 
+								</thead><tbody id ="table_branch"> 
+                                                                <%
+                                                                    if(id!=null)
+                                                                    {
+                                                                        JdbcConnection jc = new JdbcConnection();
+                                                                        String getbranches = "select *from dbo.branch_master where courseid in(select courseid from dbo.course_master where coursename='"+id+"');";
+                                                                        System.out.println(getbranches);
+                                                                        ResultSet branches = jc.retreiveData(getbranches);
+                                                                        
+                                                                        while(branches.next())
+                                                                        {
+                                                                        
+                                                                %>
 								
+                                                                        <tr>
+                                                                            <td><% out.println(branches.getString("branchcode")); %></th>
+                                                                            <td><% out.println(branches.getString("branchname")); %></th>
+                                                                            <td><% out.println(branches.getString("refer")); %></th>
+                                                                            <td ><% out.println(branches.getString("no_of_seats")); %></th>
+                                                                            <td><% out.println(branches.getString("aicte_name")); %></th>													
+									</tr>
+                                                                <%
+                                                                            }
+                                                                    }
+                                                                %>        
 								</tbody>
+                                                                
 							</table>						
 						</div>						
 					</div><!-- /.row -->
@@ -459,7 +489,7 @@ $(document).ready(function()
 		else 
 		{
 			// Returns successful data submission message when the entered information is stored in database.
-			$.post("./actions/addcourse/insertbranchdata.jsp", 
+			$.post("./actions/updatecourse/updatebranchdata.jsp", 
 			{
 				branchcode: branchcode,
 				branchname: branchname,
@@ -486,20 +516,20 @@ $(document).ready(function()
 		        $('#error_message_display1').html(data);	
 			});	
 			setTimeout(wait,5000);
-			function wait()
+			/*function wait()
 			{
 				//alert("waitbranch");
 				var $select = $('#table_branch');	       
-		 		$.getJSON("./actions/addcourse/getbranch.jsp",{id: $select.val(), ajax: 'true'}, function(j)
+		 		$.getJSON("./actions/updatecourse/getbranch.jsp",{id: $select.val(), ajax: 'true'}, function(j)
 				{
 		     	 var options = '';
 		      	for (var i = 0; i < j.length; i++) 
 		      	{
-		        options += '<tr>' +'<td>'+ j[i].bc + '</td>'+'<td>'+ j[i].bn + '</td>'+'<td>'+ j[i].re + '</td>'+'<td>'+ j[i].se + '</td>'+'<td>'+ j[i].ai + '</td>'+'</tr>';
+		        options += '<tr>' +'<td><a href="modifycoursemaster.jsp?id='+j[i].co+'\bid='+j[i].bc+'"   >'+ j[i].bc + '</td>'+'<td>'+ j[i].bn + '</td>'+'<td>'+ j[i].re + '</td>'+'<td>'+ j[i].se + '</td>'+'<td>'+ j[i].ai + '</td>'+'</tr>';
 		      	}
 		        $("#table_branch").html(options); 		
 		      });	
-		   }		 
+		   }	*/	 
 		}
 
 	});
