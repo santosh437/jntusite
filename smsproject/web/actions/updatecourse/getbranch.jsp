@@ -14,8 +14,8 @@
 JdbcConnection jc = new JdbcConnection();
 
 String id = request.getParameter("id");
-System.out.println("inside updatecoursedata file"+id);
-String sql1 = "select * from dbo.branch_master where cid in(select cid from dbo.course_master where coursename="+id+");";                     
+//System.out.println("inside updatecoursedata file"+id);
+String sql1 = "select * from dbo.branch_master where courseid in (select courseid from dbo.course_master where coursename ='"+id+"');";
 //String branchcode="";
 ResultSet j = jc.retreiveData(sql1);
 JSONObject obj;

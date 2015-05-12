@@ -12,7 +12,7 @@
 <%
 //System.out.println("inside insertcoursedata file");  
 JdbcConnection jc = new JdbcConnection();
-System.out.println("inside insertcoursedata file");
+//System.out.println("inside insertcoursedata file");
 String sql1 = "select * from dbo.temp_semester_master;";                     
 //String branchcode="";
 ResultSet j = jc.retreiveData(sql1);

@@ -235,8 +235,8 @@
                                                                     if(id!=null)
                                                                     {
                                                                         JdbcConnection jc = new JdbcConnection();
-                                                                        String getbranches = "select *from dbo.branch_master where courseid in(select courseid from dbo.course_master where coursename='"+id+"');";
-                                                                        System.out.println(getbranches);
+                                                                        String getbranches = "select * from dbo.branch_master where courseid in(select courseid from dbo.course_master where coursename='"+id+"');";
+                                                                        //System.out.println(getbranches);
                                                                         ResultSet branches = jc.retreiveData(getbranches);
                                                                         
                                                                         while(branches.next())

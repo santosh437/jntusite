@@ -751,54 +751,11 @@
                 
 	</body>
 	<script>
-	function loaddata()
-	{
-		//alert("hello");
-		var $select = $('#table_branch');;
- 		 $.getJSON("./actions/addcourse/getbranch.jsp",{id: $select.val(), ajax: 'true'}, function(j)
-  		{
- 	 		var options = '';
-            for (var i = 0; i < j.length; i++) 
-            {
-                options += '<tr>' +'<td>'+ j[i].bc + '</td>'+'<td>'+ j[i].bn + '</td>'+'<td>'+ j[i].re + '</td>'+'<td>'+ j[i].se + '</td>'+'<td>'+ j[i].ai + '</td>'+'</tr>';
-            }
-            $("#table_branch").html(options); 
-        });
-        setTimeout(wait1,2000);
-		function wait1()
-		{
-            loadsem();
-        }
-    }
-        
-        
-    function loadsem()
-	{
-		//alert("hello sem");
-		var $select = $('#table_semister');	       
-        $.getJSON("./actions/addcourse/getsemister.jsp",{id: $select.val(), ajax: 'true'}, function(j)
-        {
-           var options = '';
-           for (var i = 0; i < j.length; i++) 
-           {
-                options += '<tr>' +'<td>'+ j[i].ye + '</td>'+'<td>'+ j[i].se + '</td>'+'<td>'+ j[i].sm + '</td>'+'<td>'+ j[i].co + '</td>'+'<td>'+ j[i].an + '</td>'+'</tr>';
-           }
-           $("#table_semister").html(options); 		
-       });	
-        setTimeout(wait2,2000);
-		function wait2()
-		{
-            loadcor();
-        }
-            
-    }
-
-
-    function loadcor()
+    function loaddata()
 	{
 		//alert("hello course");
 		var $select = $('#table_course');	       
-        $.getJSON("./actions/addcourse/getcourse.jsp",{id: $select.val(), ajax: 'true'}, function(j)
+        $.getJSON("./actions/updatecourse/getcourse.jsp",{id: $select.val(), ajax: 'true'}, function(j)
         {
            var options = '';
            for (var i = 0; i < j.length; i++) 
