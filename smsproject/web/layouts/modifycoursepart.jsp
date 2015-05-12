@@ -15,7 +15,7 @@
 					<a href="#">Home</a>
 				</li>
 				<li class="active">View Course</li>
-			</ul><!-- /.breadcrumb -->
+			</ul><!-- /.breadcrumb   asdfg -->
 
 			<div class="nav-search" id="nav-search">
 				<form class="form-search">
