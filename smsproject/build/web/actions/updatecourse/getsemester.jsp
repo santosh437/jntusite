@@ -1,6 +1,6 @@
 <%-- 
-    Document   : getbranchdata.jsp
-    Created on : 4 May, 2015, 10:03:46 PM
+    Document   : getsemester
+    Created on : 12 May, 2015, 4:00:10 PM
     Author     : SantoshKumar
 --%>
 
@@ -11,13 +11,10 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
 //System.out.println("inside insertcoursedata file");  
+String id = request.getParameter("id");
 JdbcConnection jc = new JdbcConnection();
-<<<<<<< HEAD
-System.out.println("inside insertcoursedata file");
-=======
 //System.out.println("inside insertcoursedata file");
->>>>>>> origin/master
-String sql1 = "select * from dbo.temp_semester_master;";                     
+String sql1 = "select * from dbo.semester_master where courseid in(select courseid from dbo.course_master where coursename='"+id+"');;";                     
 //String branchcode="";
 ResultSet j = jc.retreiveData(sql1);
 JSONObject obj;
@@ -51,3 +48,4 @@ out.println(json);
 
 
 %>
+

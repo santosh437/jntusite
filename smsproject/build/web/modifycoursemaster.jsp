@@ -751,6 +751,7 @@
                 
 	</body>
 	<script>
+<<<<<<< HEAD
 	function loaddata()
 	{
 		//alert("hello");
@@ -799,6 +800,13 @@
 		//alert("hello course");
 		var $select = $('#table_course');	       
         $.getJSON("./actions/addcourse/getcourse.jsp",{id: $select.val(), ajax: 'true'}, function(j)
+=======
+    function loaddata()
+	{
+		//alert("hello course");
+		var $select = $('#table_course');	       
+        $.getJSON("./actions/updatecourse/getcourse.jsp",{id: $select.val(), ajax: 'true'}, function(j)
+>>>>>>> origin/master
         {
            var options = '';
            for (var i = 0; i < j.length; i++) 
