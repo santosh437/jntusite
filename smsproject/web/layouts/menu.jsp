@@ -97,7 +97,7 @@
 						</li>
 
 						<li class="">
-							<a href="updatecoursemaster.jsp">
+							<a href="modifycoursemaster.jsp">
 								<i class="menu-icon fa fa-caret-right"></i>
 								Update Course
 							</a>
