@@ -1,3 +1,9 @@
+<%-- 
+    Document   : deletecoursepart
+    Created on : 13 May, 2015, 11:22:59 AM
+    Author     : SantoshKumar
+--%>
+
 <div class="main-content">
 	<div class="main-content-inner">
 		<div class="breadcrumbs" id="breadcrumbs">
@@ -10,7 +16,7 @@
 					<i class="ace-icon fa fa-home home-icon"></i>
 					<a href="#">Home</a>
 				</li>
-				<li class="active">View Course</li>
+				<li class="active">Delete Course</li>
 			</ul><!-- /.breadcrumb -->
 
 			<div class="nav-search" id="nav-search">
@@ -29,7 +35,7 @@
 					Course Dashboard
 					<small>
 						<i class="ace-icon fa fa-angle-double-right"></i>
-						View Course
+						Delete Course
 					</small>
 				</h1>
 			</div><!-- /.page-header -->
@@ -130,7 +136,11 @@
 							</table>						
 						</div>						
 					</div><!-- /.row -->
-					<!-- Branch Content ENDS -->					
+					<!-- Branch Content ENDS -->
+                                        <div class="form-group">
+                           	 	<button id="deletecourse" style="margin-left:20px;" class="btn btn-sm btn-success" style="position:relative;" data-confirm="Are you sure you want to click the button?">Delete COURSE<i class="ace-icon fa fa-arrow-right icon-on-right bigger-110"></i>
+                            	</button>
+                       	</div>
 				</div><!-- /.col -->
 			</div><!-- /.row -->
 		</div><!-- /.page-content -->
@@ -186,7 +196,7 @@ function getData()
     function loadsem()
     {
             var $select = $('#table_semister');	       
-            $.getJSON("./actions/viewcourse/gettablesemister.jsp",{id: cname, ajax: 'true'}, function(j)
+            $.getJSON("./actions/deletecourse/gettablesemister.jsp",{id: cname, ajax: 'true'}, function(j)
             {
                var options = '';
                for (var i = 0; i < j.length; i++) 

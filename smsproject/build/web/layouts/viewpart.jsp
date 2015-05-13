@@ -191,7 +191,7 @@ function getData()
                var options = '';
                for (var i = 0; i < j.length; i++) 
                {
-                    options += '<tr>' +'<td;>'+ j[i].ye + '</td>'+'<td>'+ j[i].se + '</td>'+'<td>'+ j[i].sm + '</td>'+'<td>'+ j[i].co + '</td>'+'<td>'+ j[i].an + '</td>'+'</tr>';
+                    options += '<tr>' +'<td>'+ j[i].ye + '</td>'+'<td>'+ j[i].se + '</td>'+'<td>'+ j[i].smp + '</td>'+'<td>'+ j[i].com + '</td>'+'<td>'+ j[i].ann + '</td>'+'</tr>';
                }
                $("#table_semister").html(options); 		
            });

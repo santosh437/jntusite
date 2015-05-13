@@ -71,6 +71,7 @@
                                                             }
                                                         }
                                                     %>
+                                           
 							<div style="color:red;margin-left:275px;" id="error_message_display" ></div>
 							<div class="form-group">
 								<label class="col-sm-3 control-label no-padding-right" for="form-field-1">Name of the Course:</label>
