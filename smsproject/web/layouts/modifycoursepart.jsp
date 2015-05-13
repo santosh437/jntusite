@@ -176,6 +176,8 @@
 						<div class="hr hr4 hr-dotted"></div>
 						<div class="col-xs-12" >
 						      <div class="col-xs-12" >
+<<<<<<< HEAD
+=======
                                                           <%
                                                                 String bid=request.getParameter("bid");
                                                                 if(id!=null)
@@ -183,6 +185,7 @@
                                                                     
                                                                 }
                                                           %>
+>>>>>>> origin/master
 								<form class="form-inline" id="Branch_Form" name="Branch_Form" role="form" >
 								 <div style="color:red;margin-left:275px;" id="error_message_display1" ></div>
 									<div class="form-group">
@@ -231,6 +234,12 @@
 										<th >NO.OF SEATS</th>
 										<th>AICTE NAME</th>													
 									</tr>
+<<<<<<< HEAD
+								</thead>
+								<tbody id ="table_branch"> 
+								
+								</tbody>
+=======
 								</thead><tbody id ="table_branch"> 
                                                                 <%
                                                                     if(id!=null)
@@ -258,6 +267,7 @@
                                                                 %>        
 								</tbody>
                                                                 
+>>>>>>> origin/master
 							</table>						
 						</div>						
 					</div><!-- /.row -->
@@ -490,7 +500,11 @@ $(document).ready(function()
 		else 
 		{
 			// Returns successful data submission message when the entered information is stored in database.
+<<<<<<< HEAD
+			$.post("./actions/addcourse/insertbranchdata.jsp", 
+=======
 			$.post("./actions/updatecourse/updatebranchdata.jsp", 
+>>>>>>> origin/master
 			{
 				branchcode: branchcode,
 				branchname: branchname,
@@ -517,20 +531,36 @@ $(document).ready(function()
 		        $('#error_message_display1').html(data);	
 			});	
 			setTimeout(wait,5000);
+<<<<<<< HEAD
+			function wait()
+			{
+				//alert("waitbranch");
+				var $select = $('#table_branch');	       
+		 		$.getJSON("./actions/addcourse/getbranch.jsp",{id: $select.val(), ajax: 'true'}, function(j)
+=======
 			/*function wait()
 			{
 				//alert("waitbranch");
 				var $select = $('#table_branch');	       
 		 		$.getJSON("./actions/updatecourse/getbranch.jsp",{id: $select.val(), ajax: 'true'}, function(j)
+>>>>>>> origin/master
 				{
 		     	 var options = '';
 		      	for (var i = 0; i < j.length; i++) 
 		      	{
+<<<<<<< HEAD
+		        options += '<tr>' +'<td>'+ j[i].bc + '</td>'+'<td>'+ j[i].bn + '</td>'+'<td>'+ j[i].re + '</td>'+'<td>'+ j[i].se + '</td>'+'<td>'+ j[i].ai + '</td>'+'</tr>';
+		      	}
+		        $("#table_branch").html(options); 		
+		      });	
+		   }		 
+=======
 		        options += '<tr>' +'<td><a href="modifycoursemaster.jsp?id='+j[i].co+'\bid='+j[i].bc+'"   >'+ j[i].bc + '</td>'+'<td>'+ j[i].bn + '</td>'+'<td>'+ j[i].re + '</td>'+'<td>'+ j[i].se + '</td>'+'<td>'+ j[i].ai + '</td>'+'</tr>';
 		      	}
 		        $("#table_branch").html(options); 		
 		      });	
 		   }	*/	 
+>>>>>>> origin/master
 		}
 
 	});

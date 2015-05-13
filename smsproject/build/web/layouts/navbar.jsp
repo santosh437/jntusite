@@ -73,7 +73,11 @@
 								<img class="nav-user-photo" src="./assets/dist/avatars/user.jpg" alt="Jason's Photo" />
 								<span class="user-info">
 									<small>Welcome,</small>
+<<<<<<< HEAD
+									Jason
+=======
 									<% out.println(name); %>
+>>>>>>> origin/master
 								</span>
 
 								<i class="ace-icon fa fa-caret-down"></i>
